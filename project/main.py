@@ -29,8 +29,8 @@ else:
     CREDENTIALS_FILE = Path(__file__).parent / "credentials.json"
     if not CREDENTIALS_FILE.exists():
          # Try looking in the parent directory just in case, or absolute path fallback if needed
-        CREDENTIALS_FILE = Path(r"C:\Users\Mihup\OneDrive\Desktop\Excel_Server\project\credentials.json")
-    
+        # CREDENTIALS_FILE = Path(r"C:\Users\Mihup\OneDrive\Desktop\Excel_Server\project\credentials.json")
+        CREDENTIALS_FILE = "credentials.json"
     if CREDENTIALS_FILE.exists():
          BASE_CREDS = Credentials.from_service_account_file(CREDENTIALS_FILE)
     else:
