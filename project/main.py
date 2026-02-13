@@ -28,15 +28,8 @@ else:
     # Fallback to local file
     CREDENTIALS_FILE = Path(__file__).parent / "credentials.json"
     if not CREDENTIALS_FILE.exists():
-<<<<<<< HEAD
          # Try looking in the parent directory or just the filename directly as fallback
         CREDENTIALS_FILE = Path("credentials.json")
-    
-=======
-         # Try looking in the parent directory just in case, or absolute path fallback if needed
-        # CREDENTIALS_FILE = Path(r"C:\Users\Mihup\OneDrive\Desktop\Excel_Server\project\credentials.json")
-        CREDENTIALS_FILE = "credentials.json"
->>>>>>> 1ccb4a67360c46a617edde42734ae6248677c390
     if CREDENTIALS_FILE.exists():
          BASE_CREDS = Credentials.from_service_account_file(CREDENTIALS_FILE)
     else:
@@ -69,6 +62,10 @@ class User(BaseModel):
 
 
 # ---------------- ROUTES ---------------- #
+
+@app.get("/")
+def read_root():
+    return {"status": "ok", "message": "Excel Server is running"}
 
 @app.get("/bookings")
 def get_all_bookings():
