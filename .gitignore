@@ -1,0 +1,51 @@
+# --- Python Basics ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual Environments ---
+# Common names for virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# --- Environment Variables & Secrets ---
+# NEVER commit these to Git
+.env
+.env.*
+.env.local
+
+# --- Google Cloud / Credentials ---
+# Specific to your project
+credentials.json
+client_secret.json
+token.json
+
+# --- IDE Settings (Optional but recommended) ---
+# VS Code
+.vscode/
+# PyCharm
+.idea/
+
+# --- Distribution / Builds ---
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+
+.gitignore
